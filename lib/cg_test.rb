@@ -1,5 +1,6 @@
-require 'cg_test/version'
+require 'watir'
+require 'page-object'
 
-module CgTest
-  # Your code goes here...
-end
+require_relative 'pages/page_base'
+require_relative 'pages/root'
+
