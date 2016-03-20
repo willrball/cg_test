@@ -1,11 +1,9 @@
 module CGTest
   class PageBase
+    attr_reader :br
+
     def initialize(browser)
       @br = browser
-    end
-
-    def br
-      @br
     end
 
     def base_url

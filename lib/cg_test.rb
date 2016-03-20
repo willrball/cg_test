@@ -1,6 +1,9 @@
 require 'watir'
 require 'page-object'
 
-require_relative 'pages/page_base'
-require_relative 'pages/root'
+# Set $LOADPATH
+$LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__))) unless
+  $LOAD_PATH.include?(File.dirname(__FILE__)) ||
+  $LOAD_PATH.include?(File.expand_path(File.dirname(__FILE__)))
 
+Dir[File.dirname(__FILE__) + '/pages/*.rb'].each { |file| require file.to_s }
