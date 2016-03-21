@@ -1,5 +1,4 @@
 require 'watir'
-require 'page-object'
 
 # Set $LOADPATH
 $LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__))) unless
