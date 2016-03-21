@@ -1,0 +1,6 @@
+- :name: steamLoginSecure
+  :value: XXXXXXXXXXXXX
+  :path: "/"
+  :domain: steamcommunity.com
+  :expires:
+  :secure: false
