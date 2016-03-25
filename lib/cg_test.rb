@@ -1,4 +1,5 @@
 require 'watir'
+require 'fileutils'
 
 # Set $LOADPATH
 $LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__))) unless
