@@ -1,27 +1,8 @@
-# Set $LOADPATH
-$LOAD_PATH.unshift(File.expand_path('../../lib', __FILE__)) unless
-  $LOAD_PATH.include?(File.expand_path('../../lib', __FILE__))
-
-require 'cg_test'
-
-def screenshot_dir
-  'failure_pics'
-end
-
-def time
-  Time.now.strftime '%m%d%y_%H%M%S'
-end
-
-def test_name(example)
-  example.metadata[:example_group][:full_description].tr(' ', '_') + '_' +
-    example.description.tr(' ', '_')
-end
-
-def take_screenshot(example)
-  @br.screenshot.save "failure_pics/#{test_name(example)}_#{time}.png"
-end
+require_relative '../lib/cg_test'
 
 RSpec.configure do |config|
+  include CGTest::Utils
+
   config.before(:all) do
     @br = Watir::Browser.new :chrome
   end
