@@ -3,6 +3,5 @@ describe 'Should Login' do
     lwf = CGTest::LoginWorkflow.new(@br)
     rp = lwf.login_with_steam
     rp.logout
-    sleep 10
   end
 end
