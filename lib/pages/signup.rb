@@ -5,19 +5,16 @@ module CGTest
   class SignupPage < CGTest::PageBase
     include CGTest::NavBar
 
+    def url_dir
+      '/signup'
+    end
+
     def goto
-      super('/signup')
+      super(url_dir)
     end
 
-    def steam_button
-      br.link(title: 'Sign In with your Steam')
-    end
-
-    def signin_steam
-      steam_button.click
-      get_cookie('steam.cookie')
-      br.refresh
-      CGTest::ThirdParty::SteamCommunityPage.new(br)
+    def sign_in_steam_button
+      @br.link(title: 'Sign In with your Steam')
     end
   end
 end
