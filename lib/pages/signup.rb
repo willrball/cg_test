@@ -13,12 +13,8 @@ module CGTest
       br.link(title: 'Sign In with your Steam')
     end
 
-    def steam_button_click
-      steam_button.click
-    end
-
     def signin_steam
-      steam_button_click
+      steam_button.click
       get_cookie('steam.cookie')
       br.refresh
       CGTest::ThirdParty::SteamCommunityPage.new(br)

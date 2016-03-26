@@ -5,10 +5,6 @@ module CGTest
       def sign_in_button
         br.input(id: 'imageLogin')
       end
-
-      def sign_in_button_click
-        sign_in_button.click
-      end
     end
   end
 end

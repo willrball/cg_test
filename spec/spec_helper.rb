@@ -9,12 +9,12 @@ def screenshot_dir
 end
 
 def time
-  Time.now.strftime "%m%d%y_%H%M%S"
+  Time.now.strftime '%m%d%y_%H%M%S'
 end
 
 def test_name(example)
-  example.metadata[:example_group][:full_description].gsub(' ', '_') + '_' +
-      example.description.gsub(' ', '_')
+  example.metadata[:example_group][:full_description].tr(' ', '_') + '_' +
+    example.description.tr(' ', '_')
 end
 
 def take_screenshot(example)

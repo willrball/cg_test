@@ -10,7 +10,7 @@ module CGTest
       root_page.goto
       signup_page = root_page.click_login_button
       steam_community_page = signup_page.signin_steam
-      steam_community_page.sign_in_button_click
+      steam_community_page.sign_in_button.click
       root_page
     end
   end

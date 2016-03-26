@@ -17,22 +17,14 @@ module CGTest
       br.alert.ok
     end
 
-    def click_profile_menu
-      profile_menu.click
-    end
-
     def click_login_button
       login_button.click
       CGTest::SignupPage.new(br)
     end
 
-    def click_logout_link
-      logout_link.click
-    end
-
     def logout
-      click_profile_menu
-      click_logout_link
+      profile_menu.click
+      logout_link.click
       alert_ok_button_click
     end
   end
