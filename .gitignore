@@ -114,3 +114,6 @@ data/*.cookie
 
 # Failure screenshots
 failure_pics/
+
+# CI reports
+reports/
