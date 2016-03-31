@@ -14,7 +14,7 @@ module CGTest
     end
 
     def sign_in_steam_button
-      @br.link(title: 'Sign In with your Steam')
+      br.link(title: 'Sign In with your Steam')
     end
   end
 end
