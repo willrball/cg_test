@@ -9,8 +9,8 @@ module CGTest
       '/signup'
     end
 
-    def goto
-      super(url_dir)
+    def page_title
+      'Join Cheerful Ghost Today'
     end
 
     def sign_in_steam_button

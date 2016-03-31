@@ -16,8 +16,8 @@ module CGTest
       raise "Expected #{base_url}#{url_dir} but got #{br.url}"
     end
 
-    def goto(url = '')
-      br.goto(base_url + url)
+    def goto
+      br.goto(base_url + url_dir)
       verify
     end
 

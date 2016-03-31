@@ -8,5 +8,9 @@ module CGTest
     def url_dir
       '/'
     end
+
+    def page_title
+      'Cheerful Ghost: An Awesome Community For Gamers'
+    end
   end
 end

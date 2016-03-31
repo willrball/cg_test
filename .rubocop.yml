@@ -1,2 +1,6 @@
 Metrics/LineLength:
   Max: 90
+
+Metrics/AbcSize:
+  Exclude:
+    - 'spec/*'
