@@ -4,7 +4,7 @@ RSpec.configure do |config|
   include CGTest::Utils
 
   config.before(:all) do
-    @br = Watir::Browser.new :chrome
+    @br = Watir::Browser.new ENV['TEST_BROWSER'] || :firefox
   end
 
   config.after(:all) do

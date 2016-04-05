@@ -7,17 +7,17 @@ module CGTest
       end
 
       def verify
-        return if @br.url.include? base_url
-        raise "Expected #{base_url} but got #{@br.url}"
+        return if br.url.include? base_url
+        raise "Expected #{base_url} but got #{br.url}"
       end
 
       def sign_in_button
-        @br.input(id: 'imageLogin')
+        br.input(id: 'imageLogin')
       end
 
       def sign_in
         get_cookie('steam.cookie')
-        @br.refresh
+        br.refresh
         sign_in_button.click
       end
     end
