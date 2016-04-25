@@ -5,11 +5,19 @@ describe 'Root page' do
     root_page.goto
   end
 
-  it 'should have posts that contain text' do
+  def check_posts
     posts = root_page.posts
     posts.each do |post|
       puts "Data post ID: #{post.data_post_id}"
-      expect(post.post_truncated_content.text.empty?).to be false
+      yield post
     end
+  end
+
+  it 'should have posts that contain titles' do
+    check_posts { |post| expect(post.post_title.text.empty?).to be false }
+  end
+
+  it 'should have posts that contain text' do
+    check_posts { |post| expect(post.post_truncated_content.text.empty?).to be false }
   end
 end
